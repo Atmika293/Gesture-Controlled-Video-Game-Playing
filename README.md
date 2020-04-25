@@ -17,12 +17,12 @@ A pretrained ResNet18 is used with the last layer changed, to classify 5 gesture
 Once we have the classified gesture, we pass it through the noise suppression system and finally send in the corresponding command to the game. While the user switches between gestures, the classifier might classify the frames during the transition, which is noise. To overcome this, we have set up a buffer that stores the gestures classified for the last 10 frames. If a certain gesture occurs more than 5 times, it is selected as a command the user intentionally wants to pass and is sent over to the game. 
 The command for each gesture is written in DirectX Scan codes. The codes are sent as integers to the game, which leads to the action corresponding to the command to be carried out in the game. 
 
-## Results
+# Results
 The system was tested on two games: ‘Limbo’ and ‘Untitled Goose Game’. ‘Limbo’ is a famous platformer adventurer game created by Playdead, and we used the up, down, left, right and null commands to play this game.
 ‘Untitled Goose Game’ is a puzzle stealth game developed by House House. In this game, we switched up the commands a little, and instead switched the gesture for ‘down’ to ‘space-bar’, which when called causes the goose to honk. This was to test the versatility of the gestures and to see if they work well with other commands as well.
 Demos of these game play sessions can be found in the 'Demos' folder.
 
-## References
+# References
 [1] Zhang, Zhengxin, Qingjie Liu, and Yunhong Wang. “Road Extraction by Deep Residual U-Net.” IEEE Geoscience and Remote Sensing Letters 15.5 (2018): 749–753. Crossref. Web.
 
 [2] S. Bambach, S. Lee, D. J. Crandall and C. Yu, "Lending A Hand: Detecting Hands and Recognizing Activities in Complex Egocentric Interactions," 2015 IEEE International Conference on Computer Vision (ICCV), Santiago, 2015, pp. 1949-1957.
