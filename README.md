@@ -9,11 +9,11 @@ The final system consists of 3 major modules: Hand Segmentation, Gesture Classif
 ## Hand Segmentation
 Based on the work by Zhang et al [1], a Deep Residual UNet was built to segment the hands in the incoming video feed. The model was trained for 50 epochs on EgoHands, HandOverFace and the Segmented Hands Dataset which we built using videos we shot of hands doing gestures. Each incoming frame from the video feed is passed through the UNet to get the segmented hand, which is then sent over for classification.
 <p align="center">
-<img width="460" height="300" src="https://github.com/priyanka1706/Gesture-Controlled-Video-Game-Playing/blob/master/Images/UNet_arch.png"> </p>
+<img width="500" height="300" src="https://github.com/priyanka1706/Gesture-Controlled-Video-Game-Playing/blob/master/Images/UNet_arch.png"> </p>
 <p align="center"> Deep Residual UNet Architecture </p>
 
 <p align="center">
-<img width="460" height="300" src="https://github.com/priyanka1706/Gesture-Controlled-Video-Game-Playing/blob/master/Images/UNet_blocks.png"> </p>
+<img width="300" height="400" src="https://github.com/priyanka1706/Gesture-Controlled-Video-Game-Playing/blob/master/Images/UNet_blocks.png"> </p>
 <p align="center"> Deep Residual UNet (a) Down sampling block (b) Up sampling block </p>
 
 ## Gesture Classification
@@ -21,7 +21,7 @@ Once each incoming frame is segmented, it is then passed through a ResNet18, so 
 A pretrained ResNet18 is used with the last layer changed, to classify 5 gestures using a fastai framework. The model is trained for 3 epochs on the gesture dataset we created, along with further image augmentations. 
 
 <p align="center">
-<img width="460" height="300" src="https://github.com/priyanka1706/Gesture-Controlled-Video-Game-Playing/blob/master/Images/Gestures.png"> </p>
+<img width="300" height="500" src="https://github.com/priyanka1706/Gesture-Controlled-Video-Game-Playing/blob/master/Images/Gestures.png"> </p>
 <p align="center"> Gestures for gameplay (a) Up (b) Left (c) Right (d) Down (e) Null </p>
 
 ## Command Simulation
