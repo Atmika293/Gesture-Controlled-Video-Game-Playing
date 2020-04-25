@@ -24,5 +24,7 @@ Demos of these game play sessions can be found in the 'Demos' folder.
 
 ## References
 [1] Zhang, Zhengxin, Qingjie Liu, and Yunhong Wang. “Road Extraction by Deep Residual U-Net.” IEEE Geoscience and Remote Sensing Letters 15.5 (2018): 749–753. Crossref. Web.
+
 [2] S. Bambach, S. Lee, D. J. Crandall and C. Yu, "Lending A Hand: Detecting Hands and Recognizing Activities in Complex Egocentric Interactions," 2015 IEEE International Conference on Computer Vision (ICCV), Santiago, 2015, pp. 1949-1957.
+
 [3] Khan, Aisha Urooj and Ali Borji. “Analysis of Hand Segmentation in the Wild.” 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition (2018): 4710-4719
