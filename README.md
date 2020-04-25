@@ -7,7 +7,7 @@ Apart from this, we are also presenting a segmented gesture dataset, with images
 The final system consists of 3 major modules: Hand Segmentation, Gesture Classification and Command Simulation. We trained a Deep Residual UNet for the hand segmentation and then separately trained a ResNet18 for gesture classification, and finally combined them with the noise suppression system and DirectX Scan codes in the command simulation module.
 
 ## Hand Segmentation
-Based on the work by Zhang et al, a Deep Residual UNet was built to segment the hands in the incoming video feed. The model was trained for 50 epochs on EgoHands, HandOverFace and the Segmented Hands Dataset which we built using videos we shot of hands doing gestures. Each incoming frame from the video feed is passed through the UNet to get the segmented hand, which is then sent over for classification.
+Based on the work by Zhang et al [1], a Deep Residual UNet was built to segment the hands in the incoming video feed. The model was trained for 50 epochs on EgoHands, HandOverFace and the Segmented Hands Dataset which we built using videos we shot of hands doing gestures. Each incoming frame from the video feed is passed through the UNet to get the segmented hand, which is then sent over for classification.
 
 ## Gesture Classification
 Once each incoming frame is segmented, it is then passed through a ResNet18, so that it can be classified into one of 5 gestures. We have chosen 5 gestures, four represent the standard keys used for most games: up, down, left and right. A fifth ‘null’ gesture is used for when the player does not want to press any key. This is useful when the player must wait before moving or stop before carrying out a certain action. 
@@ -28,3 +28,5 @@ Demos of these game play sessions can be found in the 'Demos' folder.
 [2] S. Bambach, S. Lee, D. J. Crandall and C. Yu, "Lending A Hand: Detecting Hands and Recognizing Activities in Complex Egocentric Interactions," 2015 IEEE International Conference on Computer Vision (ICCV), Santiago, 2015, pp. 1949-1957.
 
 [3] Khan, Aisha Urooj and Ali Borji. “Analysis of Hand Segmentation in the Wild.” 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition (2018): 4710-4719
+
+[4] Howard, Jeremy, and Sylvain Gugger. “Fastai: A Layered API for Deep Learning.” Information 11.2 (2020): 108. Crossref. Web.
